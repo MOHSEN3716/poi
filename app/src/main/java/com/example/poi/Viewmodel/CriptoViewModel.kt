@@ -12,17 +12,19 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CriptoViewModel: ViewModel() {
+class CriptoViewModel : ViewModel() {
 
     val CriptoRepository = CriptoRepository()
 
-    val NewsLiveData= MutableLiveData<ArrayList<Article>>()
+    val NewsLiveData = MutableLiveData<ArrayList<Article>>()
+    val CountryNewsLiveData = MutableLiveData<ArrayList<Article>>()
 
-    fun getCripto(){
+
+
+    fun getCripto() {
 
         CriptoRepository.getCripto?.enqueue(object : Callback<News> {
             override fun onResponse(call: Call<News>, response: Response<News>) {
-                Log.d("tagq","onResponse:${response.body()?.Arrayarticles?.get(0)?.title}")
                 NewsLiveData.postValue(response.body()?.Arrayarticles)
             }
 
@@ -32,6 +34,17 @@ class CriptoViewModel: ViewModel() {
 
 
     }
+    fun getCountTryNews() {
+
+        CriptoRepository.getCountTryNews?.enqueue(object : Callback<News> {
+            override fun onResponse(call: Call<News>, response: Response<News>) {
+                CountryNewsLiveData.postValue(response.body()?.Arrayarticles)
+            }
+
+            override fun onFailure(call: Call<News>, t: Throwable) {
+            }
 
 
+        })
+    }
 }

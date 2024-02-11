@@ -21,6 +21,11 @@ class NewsAdabter:AdapterRecyclerView<Article>(R.layout.item_news,0,0,0) {
         var img = View.findViewById<ImageView>(R.id.imgNewsThumb)
         Glide.with(context).load(element?.urlToImage).into(img)
         var txtTitle = View.findViewById<TextView>(R.id.txtTitlecripto)
-        txtTitle.text = element?.title
+        val title = element?.title
+        val line = title?.lines()
+        val line2 = line?.take(3)
+        val line3 = line2?.joinToString("\n")+"\n..."
+        txtTitle.setText(line3)
+
     }
 }

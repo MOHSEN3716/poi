@@ -20,6 +20,7 @@ class CriptoRepository {
     }
     var service = getredrofit()?.create(Criptoapiservise::class.java)
     var getCripto = service?.getCripto()
+    var getCountTryNews=service?.getCountTryNews()
 
 
 }
