@@ -4,21 +4,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.animation.Animation
 import android.widget.ProgressBar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.poi.Adabter.NewsAdabter
 import com.example.poi.Adabter.NewsCountryAdabter
 import com.example.poi.Viewmodel.CriptoViewModel
 
-class MainActivityCripto : AppCompatActivity() {
+class ActivityCriptoNews : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_cripto)
+
 
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
         var recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
