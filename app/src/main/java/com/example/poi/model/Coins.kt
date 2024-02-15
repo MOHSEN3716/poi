@@ -1,6 +1,11 @@
 package com.example.poi.model
 
-data class Coins (var NameCoin :String, var SymbolName:String, var UrlimageCoin:String,var price:Int)
+data class Coins (
+    var name :String,
+    var symbol:String,
+    var image:String,
+    var current_price:Float
+)
 
 
 

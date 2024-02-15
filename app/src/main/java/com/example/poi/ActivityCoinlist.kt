@@ -2,6 +2,7 @@ package com.example.poi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import androidx.lifecycle.Observer
@@ -33,6 +34,7 @@ class ActivityCoinlist : AppCompatActivity() {
         CoinsViewModell.CoinsLivedata.observe(this, Observer {
             recyclerViewCoin.visibility = View.VISIBLE
             progressBarCoin.visibility = View.INVISIBLE
+            Log.d("asd","${it.get(0).name}")
             CoinAdabter.loadedState(it)
 
 

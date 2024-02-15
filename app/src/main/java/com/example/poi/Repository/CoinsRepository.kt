@@ -11,7 +11,7 @@ class CoinsRepository {
         var retrofit:Retrofit?=null
         if (retrofit ==null){
             retrofit=Retrofit.Builder()
-                .baseUrl("https://api.coinranking.com/v2/")
+                .baseUrl("https://api.coingecko.com/api/v3/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
