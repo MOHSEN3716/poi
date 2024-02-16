@@ -1,8 +1,10 @@
     package com.example.poi
 
+    import android.content.Intent
     import androidx.appcompat.app.AppCompatActivity
     import android.os.Bundle
     import android.util.Log
+    import android.widget.Button
     import android.widget.Toast
     import androidx.lifecycle.Observer
     import androidx.lifecycle.ViewModelProvider
@@ -17,17 +19,17 @@
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
-            val recyclerview = findViewById<RecyclerView>(R.id.rectangles)
-            val todoadabter = todoadabter()
-            recyclerview.adapter = todoadabter
-            recyclerview.layoutManager = LinearLayoutManager(this)
-            var mainviewmodel = ViewModelProvider(this).get(mainviewmodel::class.java)
-            mainviewmodel.gettodos()
+            var btnNews = findViewById<Button>(R.id.btnNews)
+            var btnCoinlist = findViewById<Button>(R.id.btnCoinlist)
 
-            mainviewmodel.todosLiveData.observe(this, Observer {
-                it.forEach {
-                    todoadabter.loadingState()
-                }
-            })
+            btnCoinlist.setOnClickListener{
+                val intent = Intent(this, ActivityCoinlist::class.java)
+                startActivity(intent)
+            }
+            btnNews.setOnClickListener{
+                val intent = Intent(this, ActivityCriptoNews::class.java)
+                startActivity(intent)
+            }
+
         }
     }
