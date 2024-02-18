@@ -18,13 +18,13 @@ class CoinAdabter: AdapterRecyclerView<Coins>(R.layout.item_coin,0,0,0) {
         element: Coins?
     ) {
         var View = viewHolder.itemView
-        var imgCoins = View.findViewById<ImageView>(R.id.imgCoinThumbail)
-        Glide.with(context).load(element?.image).circleCrop().into(imgCoins)
-        var txtCoinName = View.findViewById<TextView>(R.id.txtCoinName)
+        var imgCoins = View.findViewById<ImageView>(R.id.imgCoin)
+        Glide.with(context).load(element?.image).into(imgCoins)
+        var txtCoinName = View.findViewById<TextView>(R.id.txtNameCoin)
         txtCoinName.text = element?.name
-        var txtSymbolName = View.findViewById<TextView>(R.id.txtSymbolName)
-        txtSymbolName.text = element?.symbol
-        var txtprice = View.findViewById<TextView>(R.id.txtprice)
+        var txtSymbolName = View.findViewById<TextView>(R.id.txtmarketcap)
+        txtSymbolName.text = element?.market_cap.toString()
+        var txtprice = View.findViewById<TextView>(R.id.txtPrice)
         txtprice.text = "$${element?.current_price.toString()}"
 
     }
