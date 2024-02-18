@@ -5,7 +5,7 @@ data class Coins (
     var symbol:String,
     var image:String,
     var current_price:Float,
-    var price_change_24h:Float,
+    var price_change_24h:Double,
     var market_cap:Float
 )
 

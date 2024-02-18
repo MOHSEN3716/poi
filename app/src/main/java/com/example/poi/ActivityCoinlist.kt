@@ -28,7 +28,7 @@ class ActivityCoinlist : AppCompatActivity() {
         }
         var progressBarCoin = findViewById<ProgressBar>(R.id.progressBarCoin)
         var recyclerViewCoin = findViewById<RecyclerView>(R.id.recyclerViewCoin)
-        recyclerViewCoin.layoutManager = LinearLayoutManager(this)
+        recyclerViewCoin.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         var CoinAdabter = CoinAdabter()
         recyclerViewCoin.adapter = CoinAdabter
         recyclerViewCoin.visibility = View.INVISIBLE

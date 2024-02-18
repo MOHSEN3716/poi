@@ -7,10 +7,10 @@
     tools:context=".ActivityCoinlist">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="@color/black"
         android:id="@+id/recyclerViewCoin"
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

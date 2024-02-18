@@ -1,6 +1,7 @@
 package com.example.poi.Adabter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -11,6 +12,15 @@ import com.example.poi.model.Coins
 import io.github.farshidroohi.AdapterRecyclerView
 
 class CoinAdabter: AdapterRecyclerView<Coins>(R.layout.item_coin,0,0,0) {
+    fun ChangeColor(textView: TextView,Number:Double){
+        var Color = if (Number<0){
+            Color.GREEN
+        }else{
+            Color.RED
+        }
+        textView.setTextColor(Color)
+
+    }
     override fun onBindView(
         viewHolder: ItemViewHolder,
         position: Int,
@@ -26,6 +36,11 @@ class CoinAdabter: AdapterRecyclerView<Coins>(R.layout.item_coin,0,0,0) {
         txtSymbolName.text = element?.market_cap.toString()
         var txtprice = View.findViewById<TextView>(R.id.txtPrice)
         txtprice.text = "$${element?.current_price.toString()}"
+        var txtprice_change_24h = View.findViewById<TextView>(R.id.txtvchange24)
+        txtprice_change_24h.text = element?.price_change_24h.toString()
+        ChangeColor(txtprice_change_24h,element!!.price_change_24h)
+
+
 
     }
 
