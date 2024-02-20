@@ -1,6 +1,6 @@
-package com.example.poi.tenwork
+package com.example.poi.Network
 
-import com.example.poi.model.Coins
+import com.example.poi.Model.Coins
 import retrofit2.Call
 import retrofit2.http.GET
 

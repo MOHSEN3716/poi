@@ -2,13 +2,11 @@ package com.example.poi.Adabter
 
 import android.content.Context
 import android.graphics.Color
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.poi.R
-import com.example.poi.model.Coins
+import com.example.poi.Model.Coins
 import io.github.farshidroohi.AdapterRecyclerView
 
 class CoinAdabter: AdapterRecyclerView<Coins>(R.layout.item_coin,0,0,0) {

@@ -1,6 +1,6 @@
-package com.example.poi.tenwork
+package com.example.poi.Network
 
-import com.example.poi.model.todos
+import com.example.poi.Model.todos
 import retrofit2.Call
 import retrofit2.http.GET
 

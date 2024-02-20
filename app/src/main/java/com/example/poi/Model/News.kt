@@ -1,4 +1,4 @@
-package com.example.poi.model
+package com.example.poi.Model
 
 import com.google.gson.annotations.SerializedName
 

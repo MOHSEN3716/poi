@@ -2,13 +2,11 @@ package com.example.poi.Adabter
 
 import android.content.Context
 import android.text.util.Linkify
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.poi.R
-import com.example.poi.model.Article
-import com.example.poi.model.News
+import com.example.poi.Model.Article
 import io.github.farshidroohi.AdapterRecyclerView
 
 class NewsAdabter:AdapterRecyclerView<Article>(R.layout.item_news,0,0,0) {

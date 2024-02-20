@@ -1,7 +1,6 @@
 package com.example.poi.Repository
 
-import com.example.poi.tenwork.Apiservise
-import com.example.poi.tenwork.Criptoapiservise
+import com.example.poi.Network.Criptoapiservise
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

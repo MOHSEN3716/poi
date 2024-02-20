@@ -1,4 +1,4 @@
-package com.example.poi.model
+package com.example.poi.Model
 
 data class Coins (
     var name :String,

@@ -1,13 +1,10 @@
 package com.example.poi.Viewmodel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.poi.Repository.CriptoRepository
-import com.example.poi.Repository.Repository
-import com.example.poi.model.Article
-import com.example.poi.model.News
-import com.example.poi.model.todos
+import com.example.poi.Model.Article
+import com.example.poi.Model.News
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

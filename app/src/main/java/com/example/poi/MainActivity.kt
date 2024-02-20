@@ -5,14 +5,11 @@
     import android.os.Bundle
     import android.util.Log
     import android.widget.Button
-    import android.widget.Toast
-    import androidx.lifecycle.Observer
-    import androidx.lifecycle.ViewModelProvider
     import androidx.recyclerview.widget.LinearLayoutManager
     import androidx.recyclerview.widget.RecyclerView
-    import com.example.poi.Adabter.todoadabter
-    import com.example.poi.Viewmodel.mainviewmodel
-    import com.example.poi.tenwork.Apiservise
+    import com.example.poi.Adabter.NewsAdabter
+    import com.example.poi.Adabter.UserListAdabter
+    import com.example.poi.Database.DatabaseUser
 
     class
 
@@ -32,6 +29,15 @@
                 val intent = Intent(this, ActivityCriptoNews::class.java)
                 startActivity(intent)
             }
+            var RecyclerView =findViewById<RecyclerView>(R.id.RecyclerViewUser)
+            RecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+            var Useradabter = UserListAdabter()
+            var Database =DatabaseUser(this)
+            RecyclerView.adapter = Useradabter
+            val list = Database.GetAldata()
+            Log.d("tegf","${list}")
+            Useradabter.loadedState(list)
+
 
         }
     }

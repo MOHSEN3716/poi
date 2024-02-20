@@ -54,5 +54,8 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
     implementation ("io.github.farshidroohi:customAdapterRecycleView:2.0.3")
 
+    implementation("androidx.sqlite:sqlite:2.2.0")
+
+
 
 }
