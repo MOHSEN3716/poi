@@ -1,9 +1,8 @@
 package com.example.poi.Database
-
-data class ModelUser(
-    var name :String,
-    var Lastname:String,
+public class ModelUser(
+    var name:String,
+    var lastname:String,
     var Email:String,
-    var Password:Int,
-    var Ege:Int
+    var Password: Int,
+    var Ege: Int
 )

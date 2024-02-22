@@ -38,7 +38,6 @@ class ActivityLogin : AppCompatActivity() {
             )
             val Database=DatabaseUser(this)
             Database.addUser(ModelUser)
-            val getaal = Database.GetAldata()
             Toast.makeText(this, "شد.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

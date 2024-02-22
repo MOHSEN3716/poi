@@ -7,6 +7,8 @@ data class Coins (
     var current_price:Float,
     var price_change_24h:Double,
     var market_cap:Float
+
+
 )
 
 

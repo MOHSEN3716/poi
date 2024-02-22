@@ -31,14 +31,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerViewUser"
-        android:layout_width="409dp"
-        android:layout_height="665dp"
+    <com.patrykandpatrick.vico.views.chart.ChartView
+        android:id="@+id/chart_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:background="@color/white"
-        android:layout_marginTop="70dp"
+        app:chart="line"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNews"
+        app:layout_constraintVertical_bias="0.37"
+        app:showBottomAxis="true"
+        app:showStartAxis="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
