@@ -12,21 +12,19 @@ import retrofit2.Response
 class CoinChartViewModel: ViewModel() {
     val CoinChartRepository = CoinChartRepository()
 
-    val CoinChartLiveData = MutableLiveData<ArrayList<CoinChart>>()
+    val CoinChartLiveData = MutableLiveData<CoinChart>()
 
     fun Chart() {
 
-        CoinChartRepository.getCoinChart?.enqueue(object : Callback<ArrayList<CoinChart>> {
-            override fun onResponse(
-                call: Call<ArrayList<CoinChart>>,
-                response: Response<ArrayList<CoinChart>>
-            ) {
-                Log.d("tagxp","${response.body()}")
+        CoinChartRepository.getCoinChart?.enqueue(object : Callback<CoinChart> {
+
+            override fun onResponse(call: Call<CoinChart>, response: Response<CoinChart>) {
                 CoinChartLiveData.postValue(response.body())
+                Log.d("tagxp","${response.body()}")
 
             }
 
-            override fun onFailure(call: Call<ArrayList<CoinChart>>, t: Throwable) {
+            override fun onFailure(call: Call<CoinChart>, t: Throwable) {
                 Log.d("tagxp","onFailure")
             }
 
