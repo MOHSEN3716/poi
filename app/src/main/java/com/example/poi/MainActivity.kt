@@ -8,9 +8,7 @@
     import androidx.recyclerview.widget.LinearLayoutManager
     import androidx.recyclerview.widget.RecyclerView
     import com.example.poi.Adabter.NewsAdabter
-    import com.example.poi.Adabter.UserListAdabter
-    import com.example.poi.Database.DatabaseUser
-    import com.example.poi.Database.ModelUser
+
     import com.patrykandpatrick.vico.compose.axis.horizontal.rememberBottomAxis
     import com.patrykandpatrick.vico.compose.axis.vertical.rememberStartAxis
     import com.patrykandpatrick.vico.compose.chart.Chart
@@ -34,10 +32,6 @@
                 val intent = Intent(this, ActivityCriptoNews::class.java)
                 startActivity(intent)
             }
-            val chartEntryModel = entryModelOf(40f, 52f, 88f, 45f)
-            var ChartView= findViewById<ChartView>(R.id.chart_view)
-            ChartView.setModel(chartEntryModel)
-
 
 
 

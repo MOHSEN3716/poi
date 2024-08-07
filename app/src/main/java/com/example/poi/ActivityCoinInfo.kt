@@ -20,14 +20,11 @@ class ActivityCoinInfo : AppCompatActivity() {
         var coin = CoinChartViewModel()
         coin.Chart()
         coin.CoinChartLiveData.observe(this,Observer{
-            val coinChart = CoinChart(it)
 
 
         })
 
 
 
-        val prices = coinChart.prices
-        Log.d("MyActivity", "Prices: $prices")
     }
 }
