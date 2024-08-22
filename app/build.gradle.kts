@@ -67,4 +67,7 @@ dependencies {
 
         implementation("com.patrykandpatrick.vico:views:1.14.0")
 
+        implementation ("androidx.room:room-ktx:2.5.0")
+
+
 }

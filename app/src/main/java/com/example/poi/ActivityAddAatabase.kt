@@ -1,12 +1,17 @@
 package com.example.poi
 
+import AddCourseViewModel
+import Course
+import CourseDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.example.poi.Database.Databaseprofessor
 import com.example.poi.Database.Modelprofessor
+import kotlinx.coroutines.flow.collectLatest
 
 class ActivityAddAatabase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,23 +19,14 @@ class ActivityAddAatabase : AppCompatActivity() {
         setContentView(R.layout.activity_adddatabes)
         val btnaddUser = findViewById<Button>(R.id.btnaddplace)
 
-        val EdtName=findViewById<EditText>(R.id.edtName)
-        val edtLastName=findViewById<EditText>(R.id.edtlastname)
-        val edtcuorse=findViewById<EditText>(R.id.edtcuorse)
-
+        val viewModel = ViewModelProvider(this)[AddCourseViewModel::class.java]
         btnaddUser.setOnClickListener{
+            val newCourse = Course(0, "mon", 1)
+            viewModel.insertCourse(newCourse)
 
-            val Name = EdtName.text.toString()
-            val edtLastName = edtLastName.text.toString()
-            val edtPassword=edtcuorse.text.toString()
-            val Modelprofessor= Modelprofessor(
-                Name,
-                edtLastName,
-            )
-            val Database= Databaseprofessor(this)
-            Database.addProfessor(Modelprofessor)
-            Toast.makeText(this, "شد.", Toast.LENGTH_SHORT).show()
         }
+
 
     }
 }
+
