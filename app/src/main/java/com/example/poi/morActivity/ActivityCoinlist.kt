@@ -1,4 +1,4 @@
-package com.example.poi
+package com.example.poi.morActivity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,9 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.poi.Adabter.CoinAdabter
-import com.example.poi.Adabter.NewsAdabter
+import com.example.poi.R
 import com.example.poi.Viewmodel.CoinsViewModel
-import com.example.poi.Viewmodel.CriptoViewModel
 
 class ActivityCoinlist : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,17 +1,12 @@
-package com.example.poi
+package com.example.poi.morActivity
 
 import AddCourseViewModel
 import Course
-import CourseDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.poi.Database.Databaseprofessor
-import com.example.poi.Database.Modelprofessor
-import kotlinx.coroutines.flow.collectLatest
+import com.example.poi.R
 
 class ActivityAddAatabase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

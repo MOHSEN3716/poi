@@ -1,20 +1,10 @@
-    package com.example.poi
+    package com.example.poi.morActivity
 
     import android.content.Intent
     import androidx.appcompat.app.AppCompatActivity
     import android.os.Bundle
-    import android.util.Log
     import android.widget.Button
-    import androidx.recyclerview.widget.LinearLayoutManager
-    import androidx.recyclerview.widget.RecyclerView
-    import com.example.poi.Adabter.NewsAdabter
-
-    import com.patrykandpatrick.vico.compose.axis.horizontal.rememberBottomAxis
-    import com.patrykandpatrick.vico.compose.axis.vertical.rememberStartAxis
-    import com.patrykandpatrick.vico.compose.chart.Chart
-    import com.patrykandpatrick.vico.compose.chart.line.lineChart
-    import com.patrykandpatrick.vico.core.entry.entryModelOf
-    import com.patrykandpatrick.vico.views.chart.ChartView
+    import com.example.poi.R
 
     class MainActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {

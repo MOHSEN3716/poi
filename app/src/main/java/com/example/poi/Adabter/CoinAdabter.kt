@@ -6,10 +6,7 @@ import android.graphics.Color
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
-import com.example.poi.ActivityCoinInfo
-import com.example.poi.MainActivity
 import com.example.poi.R
 import com.example.poi.Model.Coins
 import io.github.farshidroohi.AdapterRecyclerView
