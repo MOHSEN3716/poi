@@ -7,6 +7,12 @@ android {
     namespace = "com.example.poi"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
+
+
     defaultConfig {
         applicationId = "com.example.poi"
         minSdk = 34
@@ -57,6 +63,7 @@ dependencies {
     implementation ("io.github.farshidroohi:customAdapterRecycleView:2.0.3")
 
     implementation ("com.airbnb.android:lottie:6.1.0")
+
 
 
     implementation("androidx.sqlite:sqlite:2.2.0")
